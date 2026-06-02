@@ -1,0 +1,86 @@
+[
+  {
+    "policy": "greedy_latency",
+    "avg_latency_ms": 301.69276699888934,
+    "p50_latency_ms": 272.78174297029,
+    "p95_latency_ms": 658.7665413142946,
+    "success_rate": 0.652,
+    "deadline_miss_rate": 0.348,
+    "privacy_violation_rate": 0.0,
+    "avg_energy_j": 0.9804016297821256,
+    "npu_selection_rate": 0.384,
+    "cloud_selection_rate": 0.0
+  },
+  {
+    "policy": "dqn_with_fallback",
+    "avg_latency_ms": 306.70670278284035,
+    "p50_latency_ms": 276.5944136095853,
+    "p95_latency_ms": 658.7665413142946,
+    "success_rate": 0.652,
+    "deadline_miss_rate": 0.348,
+    "privacy_violation_rate": 0.0,
+    "avg_energy_j": 1.0188505502940508,
+    "npu_selection_rate": 0.306,
+    "cloud_selection_rate": 0.0
+  },
+  {
+    "policy": "dqn",
+    "avg_latency_ms": 292.91082985039617,
+    "p50_latency_ms": 251.91881821559542,
+    "p95_latency_ms": 654.0163913085399,
+    "success_rate": 0.634,
+    "deadline_miss_rate": 0.32,
+    "privacy_violation_rate": 0.05,
+    "avg_energy_j": 0.9297768941311396,
+    "npu_selection_rate": 0.332,
+    "cloud_selection_rate": 0.0
+  },
+  {
+    "policy": "greedy_energy",
+    "avg_latency_ms": 339.33345201433673,
+    "p50_latency_ms": 289.7773191444671,
+    "p95_latency_ms": 745.9664772483528,
+    "success_rate": 0.622,
+    "deadline_miss_rate": 0.378,
+    "privacy_violation_rate": 0.0,
+    "avg_energy_j": 0.8648347216311104,
+    "npu_selection_rate": 0.588,
+    "cloud_selection_rate": 0.0
+  },
+  {
+    "policy": "threshold_offloading",
+    "avg_latency_ms": 375.54280688954753,
+    "p50_latency_ms": 344.3284517921126,
+    "p95_latency_ms": 746.1838126814387,
+    "success_rate": 0.558,
+    "deadline_miss_rate": 0.442,
+    "privacy_violation_rate": 0.0,
+    "avg_energy_j": 1.0620779722485298,
+    "npu_selection_rate": 0.28,
+    "cloud_selection_rate": 0.036
+  },
+  {
+    "policy": "local_only",
+    "avg_latency_ms": 394.41103336109967,
+    "p50_latency_ms": 406.38355928416775,
+    "p95_latency_ms": 715.212834537885,
+    "success_rate": 0.496,
+    "deadline_miss_rate": 0.504,
+    "privacy_violation_rate": 0.0,
+    "avg_energy_j": 1.5425081334443986,
+    "npu_selection_rate": 0.0,
+    "cloud_selection_rate": 0.0
+  },
+  {
+    "policy": "cloud_only",
+    "avg_latency_ms": 431.4511448658042,
+    "p50_latency_ms": 376.210155976638,
+    "p95_latency_ms": 937.0847716641861,
+    "success_rate": 0.494,
+    "deadline_miss_rate": 0.506,
+    "privacy_violation_rate": 0.0,
+    "avg_energy_j": 1.1130874062346738,
+    "npu_selection_rate": 0.0,
+    "cloud_selection_rate": 0.372
+  }
+]

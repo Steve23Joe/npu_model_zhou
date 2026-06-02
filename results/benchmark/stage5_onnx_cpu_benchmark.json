@@ -1,0 +1,24 @@
+[
+  {
+    "model_name": "offloading_policy_fp32",
+    "model_path": "D:\\npu20260602\\results\\onnx\\offloading_policy_fp32.onnx",
+    "mean_latency_ms": 0.019561992958188057,
+    "p50_latency_ms": 0.019299914129078388,
+    "p95_latency_ms": 0.020505039719864726,
+    "throughput_inferences_per_second": 51119.535833460686,
+    "model_size_kb": 20.984375,
+    "warmup_runs": 20.0,
+    "measured_runs": 300.0
+  },
+  {
+    "model_name": "offloading_policy_int8",
+    "model_path": "D:\\npu20260602\\results\\onnx\\offloading_policy_int8.onnx",
+    "mean_latency_ms": 0.009813333551088968,
+    "p50_latency_ms": 0.0097999582067132,
+    "p95_latency_ms": 0.010100076906383038,
+    "throughput_inferences_per_second": 101902.17165185747,
+    "model_size_kb": 9.8125,
+    "warmup_runs": 20.0,
+    "measured_runs": 300.0
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "policy": "greedy_latency",
+    "avg_latency_ms": 302.43573041929284,
+    "p50_latency_ms": 270.0736700650107,
+    "p95_latency_ms": 701.0361355847467,
+    "success_rate": 0.666,
+    "deadline_miss_rate": 0.334,
+    "privacy_violation_rate": 0.0,
+    "avg_energy_j": 0.9893448069916635,
+    "npu_selection_rate": 0.39,
+    "cloud_selection_rate": 0.0,
+    "num_tasks": 500.0
+  },
+  {
+    "policy": "greedy_energy",
+    "avg_latency_ms": 348.42055584223715,
+    "p50_latency_ms": 291.4615757431777,
+    "p95_latency_ms": 747.9468851673793,
+    "success_rate": 0.62,
+    "deadline_miss_rate": 0.38,
+    "privacy_violation_rate": 0.0,
+    "avg_energy_j": 0.8509130419764804,
+    "npu_selection_rate": 0.628,
+    "cloud_selection_rate": 0.0,
+    "num_tasks": 500.0
+  },
+  {
+    "policy": "threshold_offloading",
+    "avg_latency_ms": 372.2738383279964,
+    "p50_latency_ms": 318.88900569007217,
+    "p95_latency_ms": 749.4559704076125,
+    "success_rate": 0.57,
+    "deadline_miss_rate": 0.43,
+    "privacy_violation_rate": 0.0,
+    "avg_energy_j": 1.043035437159022,
+    "npu_selection_rate": 0.302,
+    "cloud_selection_rate": 0.04,
+    "num_tasks": 500.0
+  },
+  {
+    "policy": "local_only",
+    "avg_latency_ms": 396.09431215827004,
+    "p50_latency_ms": 382.45109840181857,
+    "p95_latency_ms": 730.2468498988816,
+    "success_rate": 0.494,
+    "deadline_miss_rate": 0.506,
+    "privacy_violation_rate": 0.0,
+    "avg_energy_j": 1.55000924863308,
+    "npu_selection_rate": 0.0,
+    "cloud_selection_rate": 0.0,
+    "num_tasks": 500.0
+  },
+  {
+    "policy": "cloud_only",
+    "avg_latency_ms": 445.12321297238964,
+    "p50_latency_ms": 375.72987948336913,
+    "p95_latency_ms": 1055.2432191742687,
+    "success_rate": 0.492,
+    "deadline_miss_rate": 0.508,
+    "privacy_violation_rate": 0.0,
+    "avg_energy_j": 1.1204779631242878,
+    "npu_selection_rate": 0.0,
+    "cloud_selection_rate": 0.358,
+    "num_tasks": 500.0
+  }
+]

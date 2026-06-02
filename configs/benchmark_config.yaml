@@ -1,0 +1,9 @@
+seed: 42
+num_tasks: 1000
+models:
+  fp32_onnx: results/stage4/policy_fp32.onnx
+  int8_onnx: results/stage4/policy_int8.onnx
+benchmark:
+  warmup_runs: 20
+  measured_runs: 200
+  output_dir: results/stage5

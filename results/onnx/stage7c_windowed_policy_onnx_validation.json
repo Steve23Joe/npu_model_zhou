@@ -1,0 +1,36 @@
+{
+  "onnx_path": "D:\\npu20260602\\results\\onnx\\windowed_policy_fp32.onnx",
+  "input_shape": [
+    1,
+    64,
+    24
+  ],
+  "torch_output_shape": [
+    1,
+    64,
+    4
+  ],
+  "onnx_output_shape": [
+    1,
+    64,
+    4
+  ],
+  "expected_output_shape": [
+    1,
+    64,
+    4
+  ],
+  "shape_match": true,
+  "max_abs_diff": 3.8743019104003906e-07,
+  "parameter_count": 3232772,
+  "model_size_bytes": 3558725,
+  "config": {
+    "feature_dim": 24,
+    "d_model": 256,
+    "nhead": 8,
+    "num_layers": 4,
+    "dim_feedforward": 1024,
+    "num_actions": 4,
+    "dropout": 0.0
+  }
+}

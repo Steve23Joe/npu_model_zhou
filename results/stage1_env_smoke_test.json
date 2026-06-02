@@ -1,0 +1,13 @@
+{
+  "initial_task_id": 0,
+  "steps": 100,
+  "success_rate": 0.06,
+  "deadline_miss_rate": 0.94,
+  "privacy_violation_rate": 0.27,
+  "mean_reward": -7.044111046655591,
+  "mean_latency_ms": 2769.5043048266252,
+  "mean_energy_j": 4.492134836579267,
+  "last_observation_shape": [
+    10
+  ]
+}

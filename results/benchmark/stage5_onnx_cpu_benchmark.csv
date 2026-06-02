@@ -1,0 +1,3 @@
+model_name,model_path,mean_latency_ms,p50_latency_ms,p95_latency_ms,throughput_inferences_per_second,model_size_kb,warmup_runs,measured_runs
+offloading_policy_fp32,D:\npu20260602\results\onnx\offloading_policy_fp32.onnx,0.019561992958188057,0.019299914129078388,0.020505039719864726,51119.535833460686,20.984375,20.0,300.0
+offloading_policy_int8,D:\npu20260602\results\onnx\offloading_policy_int8.onnx,0.009813333551088968,0.0097999582067132,0.010100076906383038,101902.17165185747,9.8125,20.0,300.0

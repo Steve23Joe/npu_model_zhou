@@ -1,0 +1,32 @@
+seed: 42
+environment:
+  max_steps: 200
+  actions:
+    - local
+    - edge_cpu
+    - edge_npu
+    - cloud
+task_generator:
+  data_size_mb:
+    min: 0.05
+    max: 6.0
+  compute_gcycles:
+    min: 0.1
+    max: 6.0
+  deadline_ms:
+    min: 110.0
+    max: 680.0
+  npu_accelerable_probability: 0.5
+nodes:
+  local:
+    compute_gcycles_per_s: 8.0
+    power_w: 4.0
+  edge_cpu:
+    compute_gcycles_per_s: 42.0
+    power_w: 9.0
+  edge_npu:
+    compute_gcycles_per_s: 120.0
+    power_w: 7.0
+  cloud:
+    compute_gcycles_per_s: 180.0
+    power_w: 22.0

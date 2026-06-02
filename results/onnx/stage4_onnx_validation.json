@@ -1,0 +1,21 @@
+{
+  "fp32_onnx_path": "D:\\npu20260602\\results\\onnx\\offloading_policy_fp32.onnx",
+  "input_shape": [
+    1,
+    10
+  ],
+  "torch_output_shape": [
+    1,
+    4
+  ],
+  "onnx_output_shape": [
+    1,
+    4
+  ],
+  "max_abs_diff": 2.9802322387695312e-08,
+  "shape_match": true,
+  "int8_onnx_path": "D:\\npu20260602\\results\\onnx\\offloading_policy_int8.onnx",
+  "fp32_size_bytes": 21488,
+  "int8_size_bytes": 10048,
+  "size_reduction_ratio": 0.5323901712583767
+}

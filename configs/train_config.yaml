@@ -1,0 +1,15 @@
+seed: 42
+algorithm: dqn
+total_timesteps: 12000
+learning_rate: 0.0005
+buffer_size: 30000
+learning_starts: 500
+batch_size: 128
+gamma: 0.97
+train_freq: 4
+target_update_interval: 500
+exploration_fraction: 0.35
+exploration_final_eps: 0.03
+eval_freq: 2000
+eval_episodes: 5
+output_dir: results/rl
