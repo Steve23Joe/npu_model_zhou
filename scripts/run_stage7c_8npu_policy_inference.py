@@ -80,12 +80,15 @@ def worker(rank: int, args: argparse.Namespace, result_queue: Queue) -> None:
 
     windows = iterations * args.batch_size
     tasks = windows * args.seq_len
+    batches_per_sec = iterations / elapsed_sec if elapsed_sec > 0 else 0.0
     result_queue.put(
         {
             "rank": rank,
             "device": device_name,
             "iterations": iterations,
             "elapsed_sec": elapsed_sec,
+            "latency_ms_per_batch": (elapsed_sec / iterations * 1000.0) if iterations > 0 else 0.0,
+            "batches_per_sec": batches_per_sec,
             "windows_per_sec": windows / elapsed_sec if elapsed_sec > 0 else 0.0,
             "tasks_per_sec": tasks / elapsed_sec if elapsed_sec > 0 else 0.0,
             "batch_size": args.batch_size,
@@ -156,6 +159,7 @@ def main() -> None:
     per_device.sort(key=lambda item: int(item["rank"]))
     total_tasks_per_sec = sum(float(item["tasks_per_sec"]) for item in per_device)
     total_windows_per_sec = sum(float(item["windows_per_sec"]) for item in per_device)
+    total_batches_per_sec = sum(float(item["batches_per_sec"]) for item in per_device)
     payload = {
         "status": "completed",
         "requested_devices": args.num_devices,
@@ -163,6 +167,7 @@ def main() -> None:
         "used_devices": used_devices,
         "parameter_count": parameter_count,
         "config": vars(args),
+        "total_batches_per_sec": total_batches_per_sec,
         "total_windows_per_sec": total_windows_per_sec,
         "total_tasks_per_sec": total_tasks_per_sec,
         "per_device": per_device,
@@ -174,9 +179,12 @@ def main() -> None:
     for item in per_device:
         print(
             f"{item['device']}: iterations={item['iterations']} "
+            f"latency_ms/batch={item['latency_ms_per_batch']:.2f} "
+            f"batches/s={item['batches_per_sec']:.2f} "
             f"windows/s={item['windows_per_sec']:.2f} "
             f"tasks/s={item['tasks_per_sec']:.2f}"
         )
+    print(f"Total batches/s: {total_batches_per_sec:.2f}")
     print(f"Total windows/s: {total_windows_per_sec:.2f}")
     print(f"Total tasks/s: {total_tasks_per_sec:.2f}")
     print(f"Saved JSON: {output_path}")

@@ -7,7 +7,7 @@
   "parameter_count": 3232772,
   "config": {
     "num_devices": 8,
-    "duration_sec": 10.0,
+    "duration_sec": 1.0,
     "batch_size": 512,
     "seq_len": 64,
     "feature_dim": 24,
@@ -16,7 +16,7 @@
     "num_layers": 4,
     "dim_feedforward": 1024,
     "dtype": "float16",
-    "warmup_iters": 10
+    "warmup_iters": 1
   },
   "per_device": []
 }
